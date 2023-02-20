@@ -34,6 +34,24 @@
         <a href="/services.html" class="nav-link">Services</a>
       </div>
       <a class="lets-chat" href="'/contact.html">Let's Chat</a>
+
+      <div class="mobile-navigation">
+        <i class="fas fa-bars"></i>
+        <div class="menu-nav">
+          <ul>
+            <li><a href="/" class="nav-link">Home</a></li>
+            <li>
+              <a href="/achievements.html" class="nav-link">Achievements</a>
+            </li>
+            <li><a href="/about.html" class="nav-link">About</a></li>
+            <li><a href="/projects.html" class="nav-link">Projects</a></li>
+            <li><a href="/services.html" class="nav-link">Services</a></li>
+            <li>
+              <a class="lets-chat" href="'/contact.html">Let's Chat</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </header>
     <hr />
 
@@ -96,22 +114,34 @@
           </div>
         </div>
         <div class="tech-stack">
-          <img claas="tech-icon" src="./assets/python.png" />
-          <img claas="tech-icon" src="./assets/csharp.png" />
-          <img claas="tech-icon" src="./assets/node.png" />
-          <img claas="tech-icon" src="./assets/java.png" />
-          <img claas="tech-icon" src="./assets/javascript.png" />
-          <img claas="tech-icon" src="./assets/reactnative.png" />
-          <img claas="tech-icon" src="./assets/c.png" />
-          <img claas="tech-icon" src="./assets/cplusplus.png" />
+          <img class="tech-icon" src="./assets/python.png" />
+          <img class="tech-icon" src="./assets/csharp.png" />
+          <img class="tech-icon" src="./assets/node.png" />
+          <img class="tech-icon" src="./assets/java.png" />
+          <img class="tech-icon" src="./assets/javascript.png" />
+          <img class="tech-icon" src="./assets/reactnative.png" />
+          <img class="tech-icon" src="./assets/c.png" />
+          <img class="tech-icon" src="./assets/cplusplus.png" />
         </div>
       </div>
     </div>
 
-    <!-- MDB -->
     <script
       type="text/javascript"
       src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.1.0/mdb.min.js"
     ></script>
+
+    <script>
+      const hamburger = document.querySelector(".mobile-navigation i");
+      const menuNav = document.querySelector(".menu-nav");
+      hamburger.addEventListener("click", (e) => {
+        e.preventDefault();
+
+        const classes = menuNav.classList;
+
+        if (classes.contains("active")) menuNav.classList.remove("active");
+        else menuNav.classList.add("active");
+      });
+    </script>
   </body>
 </html>
