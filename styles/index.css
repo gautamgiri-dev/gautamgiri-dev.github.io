@@ -71,6 +71,7 @@ body {
   border: 1px solid rgba(0, 0, 4, 0.8);
   border-radius: 8px;
   transition: all 200ms ease-in-out;
+  max-width: fit-content;
 }
 
 .lets-chat:hover {
@@ -235,6 +236,12 @@ body {
   display: none;
 }
 
+@media only screen and (max-width: 1200px) {
+  .tech-stack {
+    display: none;
+  }
+}
+
 @media only screen and (max-width: 1030px) {
   body {
     background-color: white !important;
@@ -244,6 +251,11 @@ body {
   .navigation,
   .lets-chat {
     display: none;
+  }
+
+  .mobile-navigation .lets-chat {
+    display: block;
+    max-width: fit-content;
   }
 
   .header {

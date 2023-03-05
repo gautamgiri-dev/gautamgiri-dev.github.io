@@ -142,6 +142,13 @@
         if (classes.contains("active")) menuNav.classList.remove("active");
         else menuNav.classList.add("active");
       });
+
+      document.addEventListener("mouseup", (e) => {
+        e.preventDefault();
+        if (e.target === hamburger) return;
+        const classes = menuNav.classList;
+        menuNav.classList.remove("active");
+      });
     </script>
   </body>
 </html>
