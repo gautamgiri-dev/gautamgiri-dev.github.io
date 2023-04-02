@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Library Manager - Manage your Books</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon" />
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap");
 
@@ -18,7 +19,7 @@
           BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
           "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
           "Segoe UI Symbol", "Noto Color Emoji";
-        background: url("./assets/bg.png") no-repeat;
+        background: url("./assets/bg.webp") no-repeat;
         background-size: cover;
       }
     </style>
@@ -88,7 +89,7 @@
           src="./assets/logo.png"
           alt="Library Manager"
         />
-        <nav class="flex flex-row gap-4">
+        <nav class="flex flex-row flex-wrap gap-4">
           <a class="link" href="#home">Home</a>
           <a class="link" href="#features">Features</a>
           <a class="link" href="#how-it-works">How it works?</a>
@@ -187,7 +188,7 @@
       <div class="flex flex-col items-center gap-10">
         <h2>How it works?</h2>
         <iframe
-          class="w-[70%] h-[256px] lg:h-[436px] rounded-lg shadow-2xl"
+          class="w-full lg:w-[70%] h-[256px] lg:h-[436px] rounded-lg shadow-2xl"
           src="https://www.youtube.com/embed/RVtL3V3OdVk"
           title="YouTube video player"
           frameborder="0"
@@ -202,7 +203,7 @@
         <div
           class="flex flex-col lg:flex-row justify-between items-center w-full"
         >
-          <div class="flex flex-row items-center gap-2 lg:gap-4">
+          <div class="flex flex-wrap flex-row items-center gap-2 lg:gap-4">
             <img
               class="w-10 lg:w-12 border border-white rounded-[20%] shadow-lg"
               src="./assets/logo.png"
@@ -217,8 +218,12 @@
             <a class="link hover:bg-transparent" href="#how-it-works"
               >How it works?</a
             >
-            <a class="link hover:bg-transparent" href="#">Privacy Policy</a>
-            <a class="link hover:bg-transparent" href="#">Terms & Conditions</a>
+            <a class="link hover:bg-transparent" href="/privacy-policy.html"
+              >Privacy Policy</a
+            >
+            <a class="link hover:bg-transparent" href="/terms-n-conditions.html"
+              >Terms & Conditions</a
+            >
           </nav>
         </div>
         <a class="w-fit" href="#">
