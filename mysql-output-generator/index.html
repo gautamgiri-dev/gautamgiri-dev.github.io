@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MySQL Output Generator</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="./assets/logo.svg" />
+  </head>
+  <body>
+    <header>
+      <div class="title">
+        <img src="./assets/logo.svg" alt="" />
+        <h1>MySQL Output Generator</h1>
+      </div>
+      <p>A simple tool to generate and export MySQL output screenshots</p>
+    </header>
+
+    <main>
+      <!-- Slideshow container -->
+      <div class="slideshow-container">
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 4</div>
+          <img src="./assets/ss1.png" />
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 4</div>
+          <img src="./assets/ss2.png" />
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 4</div>
+          <img src="./assets/ss3.png" />
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">4 / 4</div>
+          <img src="./assets/ss4.png" />
+        </div>
+      </div>
+      <br />
+
+      <a
+        href="https://github.com/programmingtubetools/MySQL-Output-Generator/releases/download/beta/MySqlOutputGenerator.msi"
+        class="download-btn"
+        >Download Now</a
+      >
+    </main>
+    <footer>
+      <p>&copy; 2023 Gautam Kumar Giri. All rights reserved.</p>
+    </footer>
+
+    <script>
+      let slideIndex = 0;
+      showSlides();
+
+      function showSlides() {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+          slideIndex = 1;
+        }
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(showSlides, 5000); // Change image every 5 seconds
+      }
+    </script>
+  </body>
+</html>
