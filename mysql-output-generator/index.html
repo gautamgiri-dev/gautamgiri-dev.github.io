@@ -15,6 +15,11 @@
     </header>
 
     <main>
+      <div class="stats">
+        <p>Page Views: <strong id="page-views">15</strong></p>
+        <p>Downloads: <strong id="downloads">16</strong></p>
+      </div>
+
       <!-- Slideshow container -->
       <div class="slideshow-container">
         <!-- Full-width images with number and caption text -->
@@ -43,6 +48,7 @@
       <a
         href="https://github.com/programmingtubetools/MySQL-Output-Generator/releases/download/beta/MySqlOutputGenerator.msi"
         class="download-btn"
+        target="_blank"
         >Download Now</a
       >
     </main>
@@ -67,6 +73,31 @@
         slides[slideIndex - 1].style.display = "block";
         setTimeout(showSlides, 5000); // Change image every 5 seconds
       }
+
+      fetch("http://gautamgiri.pythonanywhere.com/increment-page-views", {
+        method: "POST",
+      });
+
+      const downloadButton = document.querySelector(".download-btn");
+      downloadButton.addEventListener("click", (e) => {
+        fetch("http://gautamgiri.pythonanywhere.com/increment-downloads", {
+          method: "POST",
+        });
+      });
+
+      fetch("http://gautamgiri.pythonanywhere.com/page-views")
+        .then((res) => res.json())
+        .then(
+          (d) =>
+            (document.querySelector("#page-views").textContent = d.page_views)
+        );
+
+      fetch("http://gautamgiri.pythonanywhere.com/downloads")
+        .then((res) => res.json())
+        .then(
+          (d) =>
+            (document.querySelector("#downloads").textContent = d.downloads)
+        );
     </script>
   </body>
 </html>
